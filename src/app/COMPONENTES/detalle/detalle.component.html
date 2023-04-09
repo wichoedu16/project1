@@ -1,0 +1,199 @@
+<form aria-readonly="true">
+<div class="form-row">
+    <div class="col-xs-12 col-sm-6 col-md-5">
+        <div class="EditProfile-left">
+            <h2>Datos Personales</h2>
+            <div class="EditProfile-social">
+                <div class="EditProfile-socialName">Cédula</div>
+                <div class="EditProfile-input"><input type="tel" name="cedula" maxlength="10" [(ngModel)]="empleado.cedula" disabled="true"></div>
+                <div class="EditProfile-errorTxt"></div>
+            </div>
+            <div class="EditProfile-social">
+                <div class="EditProfile-socialName">Nombres</div>
+                <div class="EditProfile-input"><input type="tel" name="nombre" [(ngModel)]="empleado.nombre"  disabled="true"></div>
+                <div class="EditProfile-errorTxt"></div>
+            </div>
+            <div class="EditProfile-social">
+                <div class="EditProfile-socialName"><label>Primer Apellido</label>
+                    <div class="EditProfile-input"><input type="text" required="" name="apellidoPaterno" [(ngModel)]="empleado.apellidoPaterno" disabled="true"> </div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+            </div>
+            <div class="EditProfile-social">
+                <div class="EditProfile-socialName"><label>Segundo Apellido</label>
+                    <div class="EditProfile-input"><input type="text" required="" name="apellidoMaterno" [(ngModel)]="empleado.apellidoMaterno" disabled="true"></div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+            </div>
+            <div class="EditProfile-social">
+                <div class="EditProfile-socialName"><label>Fecha Nacimiento</label>
+                    <div class="EditProfile-input"><input type="date" name="nacimiento" [(ngModel)]="empleado.fechaNacimiento" disabled="true"> </div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+            </div>
+            <div class="EditProfile-social">
+                <div class="EditProfile-socialName"><label>Nacionalidad</label>
+                    <div class="EditProfile-input"><input type="text" name="nacionailidad" [(ngModel)]="empleado.nacionalidad" disabled="true"> </div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+            </div>
+            <div class="EditProfile-flex">
+                <div class="EditProfile-socialName"><label>Género</label>
+                    <div class="EditProfile-input">
+                        <select name="genero" class="EditProfile-select" [(ngModel)]="empleado.sexo" disabled="true">
+                            <option selected>Seleccionar...</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+                <div class="EditProfile-socialName"><label>Estado Civil</label>
+                    <div class="EditProfile-input">
+                        <select name="estadoCivil" class="EditProfile-select" [(ngModel)]="empleado.estadoCivil" disabled="true">
+                            <option selected>Seleccionar...</option>
+                            <option value="Soltero">Soltero</option>
+                            <option value="Casado">Casado</option>
+                            <option value="Viudo">Viudo</option>
+                            <option value="Divorciado">Divorciado</option>
+                            <option value="Union Libre">Union Libre</option>
+                        </select>
+                    </div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-7">
+        <div class="EditProfile-right">
+            <form id="form" enctype="multipart/form-data"><input type="file" class="EditProfile-inputFile"
+                    name="profile_picture">
+                <h2>Datos Nomina</h2>
+                <div class="EditProfile-flex">
+                    <div><label>Fecha Ingreso</label>
+                        <div class="EditProfile-input"><input type="date" name="ingreso" [(ngModel)]="empleado.fechaIngreso" disabled="true"></div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                    <div class="EditProfile-margin"><label>Estado</label>
+                        <div class="EditProfile-input">
+                            <select name="estado" class="EditProfile-select" [(ngModel)]="empleado.estado" disabled="true">
+                                <option selected>Seleccionar...</option>
+                                <option value="A">Activo</option>
+                                <option value="I">Inactivo</option>
+                            </select>
+                        </div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                </div>
+                <div class="EditProfile-margin"><label>Cargo</label>
+                    <div class="EditProfile-input"><input type="text" maxlength="140" name="cargo" [(ngModel)]="empleado.idCargo" disabled="true"></div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+                <div class="EditProfile-flex">
+                    <div class="EditProfile-margin"><label>Id Jefe</label>
+                        <div class="EditProfile-input"><input type="text" required="" name="idJefe" [(ngModel)]="empleado.idJefe" disabled="true"></div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                    <div class="EditProfile-margin"><label>Nombre Jefe</label>
+                        <div class="EditProfile-input"><input type="email" required="" name="nombreJefe" id="nombreJefe" [(ngModel)]="empleado.jefe" disabled="true">
+                        </div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                </div>
+                <div class="EditProfile-margin"><label>Correo Institucional</label>
+                    <div class="EditProfile-input"><input type="text" maxlength="180" name="correoInstitucional" [(ngModel)]="empleado.correoInstitucional" disabled="true">
+                    </div>
+                    <div class="EditProfile-errorTxt"></div>
+                </div>
+                <div class="EditProfile-flex">
+                    <div><label>Fecha Salida</label>
+                        <div class="EditProfile-input"><input type="date" name="salida" [(ngModel)]="empleado.fechaSalida" disabled="true"></div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                    <div><label>Fecha Reingreso</label>
+                        <div class="EditProfile-input"><input type="date" name="reingreso" [(ngModel)]="empleado.fechaReingreso" disabled="true"></div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                </div>
+                <div class="EditProfile-flex">
+                    <div class="EditProfile-margin"><label>Nivel educativo</label>
+                        <div class="EditProfile-input"><select name="nivelEducativo" class="EditProfile-select" [(ngModel)]="empleado.gradoAcademico" disabled="true">
+                                <option value="P">Primaria</option>
+                                <option value="S">Secundaria</option>
+                                <option value="T">Técnico</option>
+                                <option value="U">Universidad</option>
+                                <option value="M">Maestría</option>
+                                <option value="D">Doctorado</option>
+                            </select></div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                    <div class="EditProfile-margin"><label>Título</label>
+                        <div class="EditProfile-input"><input type="text" maxlength="180" [(ngModel)]="empleado.titulo" disabled="true"
+                                name="titulo"></div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                </div>
+                <div class="EditProfile-interest">
+                    <h2>Datos de Contacto</h2><span>Ubicación de Domicilio</span>
+                    <div class="EditProfile-flex">
+                        <div class="EditProfile-margin"><label>Provincia</label>
+                            <div class="EditProfile-input"><input type="text" required="" name="provincia" [(ngModel)]="empleado.provincia" disabled="true"></div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                        <div class="EditProfile-margin"><label>Canton</label>
+                            <div class="EditProfile-input"><input type="email" required="" name="canton" id="userEmail" [(ngModel)]="empleado.canton" disabled="true">
+                            </div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                    </div>
+                    <div class="EditProfile-flex">
+                        <div class="EditProfile-margin"><label>Ciudad</label>
+                            <div class="EditProfile-input"><input type="text" required="" name="ciudad" [(ngModel)]="empleado.ciudad" disabled="true"></div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                        <div class="EditProfile-margin"><label>Sector</label>
+                            <div class="EditProfile-input"><input type="email" required="" name="sector" id="userEmail" [(ngModel)]="empleado.sector" disabled="true">
+                            </div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                    </div>
+                    <div class="EditProfile-flex">
+                        <div class="EditProfile-margin"><label>Calle Principal</label>
+                            <div class="EditProfile-input"><input type="text" required="" name="callePrincipal" [(ngModel)]="empleado.callePrincipal" disabled="true"></div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                        <div class="EditProfile-margin"><label>Calle Secundaria</label>
+                            <div class="EditProfile-input"><input type="email" required="" name="calleSecundaria" id="userEmail" [(ngModel)]="empleado.calleSecundaria" disabled="true">
+                            </div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                    </div>
+                    <div class="EditProfile-flex">
+                        <div class="EditProfile-margin"><label>Telefono</label>
+                            <div class="EditProfile-input"><input type="text" required="" name="telefono" [(ngModel)]="empleado.telefono" disabled="true"></div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                        <div class="EditProfile-margin"><label>Celular</label>
+                            <div class="EditProfile-input"><input type="email" required="" name="celular" id="userEmail" [(ngModel)]="empleado.celular" disabled="true">
+                            </div>
+                            <div class="EditProfile-errorTxt"></div>
+                        </div>
+                    </div>
+                    <div class="EditProfile-margin"><label>Correo Personal</label>
+                        <div class="EditProfile-input"><input type="text" maxlength="180" name="correoPersonal" [(ngModel)]="empleado.correoPersonal" disabled="true">
+                        </div>
+                        <div class="EditProfile-errorTxt"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</form>
+<div>
+    <div>
+        <button class="btn btn-primary" (click)="regresar()">Regresar</button>
+    </div>
+</div>

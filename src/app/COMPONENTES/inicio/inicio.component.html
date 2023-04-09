@@ -1,0 +1,39 @@
+<body>
+<h3>Lista de Empleados</h3>
+<div class="container">
+  <button class="btn btn-success" [routerLink]="['/agregar']" style="text-align: right;"> Agregar</button>
+</div>
+<div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand"><i class="fa fa-car"></i></a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+<table class="table table-responsive-smtable-hover">
+    <thead>
+      <tr>
+        <th scope="col">Código Empleado</th>
+        <th scope="col">Cédula</th>
+        <th scope="col">Empleado</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <td>{{empleado.id}}</td>
+        <td>{{empleado.cedula}}</td>
+        <td>{{empleado.nombre}} {{empleado.apellidoPaterno}} {{empleado.apellidoMaterno}}  </td>
+        <td>
+            <button class="btn btn-secondary" (click)="ver(empleado.id)">Ver</button>
+            <button class="btn btn-info" (click)="actualizar(empleado.id)" style="margin-left: 10px;">Modificar</button>
+            <button class="btn btn-danger" (click)="eliminar(empleado.id)" style="margin-left: 10px;">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+</div>
+</body>

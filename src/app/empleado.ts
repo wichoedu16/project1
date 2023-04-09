@@ -1,0 +1,32 @@
+export class Empleado {
+  id: string;
+  cedula: string;
+  usuario: string;
+  estado: string;
+  nombre: string;
+  apellidoPaterno: string;
+  apellidoMaterno: string;
+  fechaNacimiento: Date;
+  sexo: string;
+  nacionalidad: string;
+  estadoCivil: string;
+  fechaIngreso: Date;
+  fechaSalida: null;
+  fechaReingreso: null;
+  idCargo: string;
+  gradoAcademico: string;
+  titulo: string;
+  idSalario: string;
+  jefe: string;
+  idJefe: string;
+  provincia: string;
+  canton: string;
+  ciudad: string;
+  sector: string;
+  telefono: string;
+  celular: string;
+  callePrincipal: string;
+  calleSecundaria: string;
+  correoPersonal: string;
+  correoInstitucional: string;
+}
